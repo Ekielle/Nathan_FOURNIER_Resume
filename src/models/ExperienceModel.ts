@@ -3,6 +3,8 @@ type ExperienceModel = {
     company: string;
     startDate: string;
     endDate?: string;
-    description: string;
+    context: string;
+    mission: string;
+    tech_Environnement: string;
 }
 export default ExperienceModel;

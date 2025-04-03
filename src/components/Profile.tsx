@@ -6,8 +6,7 @@ const Profile: React.FC = () => {
     return (
         <Card title="Nathan Fournier" subTitle="Full Stack Developer" style={{ marginBottom: '2rem' }}>
             <p>
-                Passionate developer with experience in building modern web applications using React, Node.js, and
-                other cutting-edge technologies. Skilled in creating responsive and user-friendly interfaces.
+                Développeur depuis 9 ans, j'ai eu l'occasion de travailler dans plusieurs domaines tels que le développement de logiciels embarqués, l'édition de logiciels ou encore le développement d'un système de gestion de contenu (CMS).
             </p>
             <Button label="Download Resume" icon="pi pi-download" className="p-button-outlined" />
         </Card>

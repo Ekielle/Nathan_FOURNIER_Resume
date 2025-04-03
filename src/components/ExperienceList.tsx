@@ -3,6 +3,7 @@ import Experience from "./Experience";
 import ExperienceModel from "../models/ExperienceModel";
 import { GetExperience as GetExperiences } from "../services/ExperienceService";
 import { useEffect, useState } from "react";
+import { Card } from "primereact/card";
 
 
 const ExperienceList : React.FC = () => {
@@ -16,16 +17,18 @@ const ExperienceList : React.FC = () => {
     }, []);
 
     return (
-        <Panel header="Experience" style={{ marginBottom: '2rem' }}>
-          <ul>
-            {
-                experiences.map((experience) => (
-                    <li key={`${experience.company}-${experience.title}`}>
+        <Panel header="Experiences" style={{ marginBottom: '2rem' }}>
+        <div className="p-grid">
+        {
+            experiences.map((experience) => (
+                <div key={`${experience.title}-${experience.title}`} className="p-col-12 p-md-6 p-lg-4">
+                    <Card style={{ marginBottom: '24px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.75)' }}>
                         <Experience experience={experience} />
-                    </li>
-                ))
-            }
-          </ul>
+                    </Card>
+                </div>
+            ))
+        }
+        </div>
         </Panel>
     );
 }
