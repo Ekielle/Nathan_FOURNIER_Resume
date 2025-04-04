@@ -2,17 +2,22 @@ import './App.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { Button } from 'primereact/button';
 import { Panel } from 'primereact/panel';
-import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import Profile from './components/Profile';
 import ExperienceList from './components/ExperienceList';
 import FormationList from './components/FormationList';
 import SkillList from './components/SkillList';
+import ThemeSwitcher from './components/ThemeSwitcher';
+import 'primeicons/primeicons.css';
+import ThemeProvider from './provider/ThemeProvider';
 
 function App() {
   return (
     <PrimeReactProvider>
+      <ThemeProvider>
       <div className="resume-container" style={{ padding: '2rem', maxWidth: '1280px', margin: '0 auto' }}>
         <Profile/>
+
+        <ThemeSwitcher/>
         
         <ExperienceList/>
 
@@ -27,6 +32,7 @@ function App() {
           <Button label="Contact Me" icon="pi pi-envelope" className="p-button-success" />
         </Panel>
       </div>
+      </ThemeProvider>
     </PrimeReactProvider>
   );
 }
